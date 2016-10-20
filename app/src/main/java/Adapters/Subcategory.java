@@ -55,9 +55,9 @@ public class Subcategory extends RecyclerView.Adapter<Subcategory.CategoryViewHo
         try {
             final  JSONObject jsonObject = subcategory.getJSONObject(position);
 
-            final String nameofsub = jsonObject.getString("englishName");
+            final String nameofsub = jsonObject.getString("englishname");
             holder.category_name.setText(nameofsub);
-            holder.category_desc.setText(jsonObject.getString("englishDesc"));
+            holder.category_desc.setText(jsonObject.getString("englishdesc"));
 
 
             Glide.with(context).load("http://139.59.14.123"+jsonObject.getJSONObject("image").getString("url").replaceAll(" ","%20")).into(holder.category_img);

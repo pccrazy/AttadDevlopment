@@ -79,7 +79,7 @@ public class Product extends RecyclerView.Adapter<Product.ProductsViewHolder> {
 
                     try {
                         AndroidNetworking.post("http://139.59.14.123:3000/product/getProduct")
-                                .addBodyParameter("productId",String.valueOf(jsonObject.getInt("productId")))
+                                .addBodyParameter("productId",jsonObject.getString("productid"))
                                 .setTag("test")
                                 .setPriority(Priority.MEDIUM)
                                 .build()

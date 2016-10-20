@@ -43,13 +43,14 @@ public class ProductView extends RecyclerView.Adapter<ProductView.ViewHolder> im
     Locale locale  = new Locale("en", "UK");
     DecimalFormat df = (DecimalFormat) NumberFormat.getNumberInstance(locale);
 
-    CartSQLiteinfo cartinfo = new CartSQLiteinfo(context);
-
+    CartSQLiteinfo cartinfo;
 
     public ProductView (Context context, JSONObject jason, RecyclerView listView){
 
         this.context = context;
         this.productInfo = jason;
+
+        cartinfo = new CartSQLiteinfo(context);
 
 //        Log.d("data", String.valueOf(listView));
 
@@ -79,9 +80,9 @@ public class ProductView extends RecyclerView.Adapter<ProductView.ViewHolder> im
             holder.productname.setText(productInfo.getString("name"));
             holder.productdiscription.setText(productInfo.getString("description"));
             holder.itemprice.setText(productInfo.getString( "price_formated"));
-            holder.productstock.setText(productInfo.getString("minStock"));
+            holder.productstock.setText(productInfo.getString("minstock"));
 
-            holder.productstocknumber.setText(productInfo.getString("؟"));
+            //holder.productstocknumber.setText(productInfo.getString("؟"));
 
 
             RecyclerView.LayoutManager layoutManager=new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false);

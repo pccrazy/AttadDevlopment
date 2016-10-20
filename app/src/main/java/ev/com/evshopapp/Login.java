@@ -30,7 +30,7 @@ public class Login extends AppCompatActivity {
     EditText member,password;
     TextView sign_up,forget_pass;
 
-    public static final String PREFS_NAME = "AOP_PREFS";
+    public static final String PREFS_NAME = "Attad";
     public static final String LOGIN = "tokenKey";
 
     String token;
@@ -83,7 +83,7 @@ public class Login extends AppCompatActivity {
 
                 JSONObject jsonObject = new JSONObject();
                 try {
-                    jsonObject.put("email2", member.getText());
+                    jsonObject.put("email", member.getText());
                     jsonObject.put("password", password.getText());
 
 
@@ -98,12 +98,21 @@ public class Login extends AppCompatActivity {
                             public void onResponse(JSONObject responseString) {
 
                                 try {
-                                    if (responseString.getString("Error").equals(false)) {
+                                    if (responseString.getBoolean("error")==false) {
 
-                                        token = responseString.getString("results");
+                                        token = responseString.getString("result");
 
-                                        save2(context,token);
+                                        save2(getApplicationContext(),token);
 
+                                        String n2  = "userLogin";
+                                        SharedPreferences.Editor editor = sharedpreferences.edit();
+                                        editor.putString(user, n2);
+                                        editor.commit();
+
+                                        startActivity(new Intent(Login.this,MainHome.class));
+
+                                    }else{
+                                        Toast.makeText(Login.this,"Wrong Credentioals",Toast.LENGTH_SHORT).show();
                                     }
                                 } catch (JSONException e) {e.printStackTrace();}
 
@@ -118,14 +127,10 @@ public class Login extends AppCompatActivity {
 
                 //if user already login to app.
 
-                String n2  = "userLogin";
-                SharedPreferences.Editor editor = sharedpreferences.edit();
-                editor.putString(user, n2);
-                editor.commit();
 
 
 
-                startActivity(new Intent(Login.this,MainHome.class));
+
 
             }
         });
