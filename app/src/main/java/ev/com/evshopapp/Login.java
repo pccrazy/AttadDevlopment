@@ -33,7 +33,7 @@ public class Login extends AppCompatActivity {
     public static final String PREFS_NAME = "AOP_PREFS";
     public static final String LOGIN = "tokenKey";
 
-    String M;
+    String token;
     Context context;
 
     SharedPreferences sharedpreferences;
@@ -83,7 +83,7 @@ public class Login extends AppCompatActivity {
 
                 JSONObject jsonObject = new JSONObject();
                 try {
-                    jsonObject.put("auth", member.getText());
+                    jsonObject.put("email", member.getText());
                     jsonObject.put("password", password.getText());
 
 
@@ -91,7 +91,6 @@ public class Login extends AppCompatActivity {
 
                 AndroidNetworking.post("http://139.59.14.123:3000/user/login")
                         .addJSONObjectBody(jsonObject) // posting json
-                        .setTag("test")
                         .setPriority(Priority.MEDIUM)
                         .build()
                         .getAsJSONObject(new JSONObjectRequestListener() {
@@ -101,9 +100,9 @@ public class Login extends AppCompatActivity {
                                 try {
                                     if (responseString.getString("Error").equals(false)) {
 
-                                        M = responseString.getString("results");
+                                        token = responseString.getString("results");
 
-                                        save2(context,M);
+                                        save2(context,token);
 
                                     }
                                 } catch (JSONException e) {e.printStackTrace();}
