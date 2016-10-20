@@ -83,7 +83,7 @@ public class Login extends AppCompatActivity {
 
                 JSONObject jsonObject = new JSONObject();
                 try {
-                    jsonObject.put("email", member.getText());
+                    jsonObject.put("email2", member.getText());
                     jsonObject.put("password", password.getText());
 
 
