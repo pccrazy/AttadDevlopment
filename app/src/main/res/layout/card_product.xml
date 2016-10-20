@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="141dp"
+    android:gravity="center"   xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:minHeight="141dp">
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/unfiltercard"
+        android:layout_width="fill_parent"
+        android:layout_height="120dp"
+        card_view:cardCornerRadius="4dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp">
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="2">
+
+
+            <ImageView
+                android:layout_width="220dp"
+                android:layout_height="fill_parent"
+                android:id="@+id/productimage"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:scaleType="centerInside"
+                android:layout_margin="4dp" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:weightSum="1"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:id="@+id/unfilterProductName"
+                        android:layout_below="@+id/deletewishlistcard"
+                        android:layout_toRightOf="@+id/Youtubeimage"
+                        android:layout_alignRight="@+id/wishlistprice"
+                        android:layout_alignEnd="@+id/wishlistprice"
+                        android:layout_weight="1.9"
+                        android:textSize="16sp"
+                        android:maxLines="2" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#ffd8d8d8"
+                    android:paddingRight="8dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="8dp"/>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:weightSum="2"
+                    android:layout_marginRight="8dp">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:id="@+id/unfilterProductDesc"
+                        android:textSize="15sp"
+                        android:layout_weight="0.8"
+                        android:layout_marginBottom="4dp" />
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.2">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:id="@+id/unfiltertprice"
+                            android:gravity="right"
+                            android:paddingRight="8dp"
+                            android:textColor="#f69102"
+                            android:textSize="11sp" />
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="2"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:id="@+id/unfilterlike"
+                                android:layout_weight="0.7"
+                                android:gravity="right"
+                                android:paddingRight="4dp"
+                                android:textSize="13sp" />
+
+                            <ImageView
+                                android:layout_width="59dp"
+                                android:layout_height="20dp"
+                                android:id="@+id/imageView17"
+                                android:src="@drawable/ic_heart"
+                                android:layout_alignParentRight="true"
+                                android:layout_weight="1.5" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+
+
+</LinearLayout>

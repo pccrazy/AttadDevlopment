@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="18dp"
+    android:paddingRight="10dp"
+    android:paddingTop="16dp"
+    tools:context=".CategorySub">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="83dp"
+            android:id="@+id/linearLayout">
+
+
+                <ImageButton
+                    android:layout_width="61dp"
+                    android:layout_height="65dp"
+                    android:id="@+id/imageButton"
+                    android:src="@drawable/ic_ic_components"/>
+
+                <ImageButton
+                    android:layout_width="61dp"
+                    android:layout_height="65dp"
+                    android:id="@+id/imageButton2"
+                    android:src="@drawable/ic_chips"/>
+
+                <ImageButton
+                    android:layout_width="61dp"
+                    android:layout_height="65dp"
+                    android:id="@+id/imageButton3"
+                    android:src="@drawable/ic_sensors"/>
+
+                <ImageButton
+                    android:layout_width="61dp"
+                    android:layout_height="65dp"
+                    android:id="@+id/imageButton4"
+                    android:src="@drawable/ic_kits"/>
+
+                <ImageButton
+                    android:layout_width="61dp"
+                    android:layout_height="65dp"
+                    android:id="@+id/imageButton5"
+                    android:src="@drawable/ic_other"/>
+
+                <ImageButton
+                    android:layout_width="61dp"
+                    android:layout_height="65dp"
+                    android:id="@+id/imageButton6"
+                    android:src="@drawable/ic_kit_2"/>
+        </LinearLayout>
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/recyclerSubView"
+            android:layout_below="@+id/linearLayout" />
+
+</RelativeLayout>
