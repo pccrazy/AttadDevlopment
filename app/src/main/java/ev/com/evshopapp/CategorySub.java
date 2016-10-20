@@ -132,7 +132,7 @@ public class CategorySub extends AppCompatActivity {
 
                         try {
                             JSONArray jsonArray = responseString.getJSONArray("result");
-                            Subcategory adapter = new Subcategory(jsonArray, CategorySub.this,Categorylist);
+                            Subcategory adapter = new Subcategory(jsonArray, getApplicationContext(),Categorylist);
                             Categorylist.setAdapter(adapter);
 
                         } catch (JSONException e) {
