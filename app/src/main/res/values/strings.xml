@@ -61,12 +61,14 @@
     <string name="Kits">Kits</string>
 
 
-    <!--product View buttons-->
+    <!--product View page buttons-->
     <string name="like">Like</string>
     <string name="addtowishlist">Add To Wishlist</string>
     <string name="addtocart">Add To Cart</string>
     <string name="confirm">Confirm</string>
     <string name="getqutation">Get Quotation</string>
+    <string name="title_activity_product__container">Product View</string>
+
 
     <!--enter quatity layout-->
     <string name="enterquantity">Please Enter Quantity :</string>
