@@ -31,6 +31,7 @@ public class Fragment_Cart extends Fragment {
         RecyclerView.LayoutManager layoutManager=new LinearLayoutManager(context,LinearLayoutManager.VERTICAL,false);
         purchaseProducts.setLayoutManager(layoutManager);
 
+        // anwar i am here
 
 
 
