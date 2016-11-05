@@ -23,6 +23,7 @@ import org.json.JSONObject;
 
 import NavDrower.CouNavItem;
 import SQliteDatabase.NavigationItemsSQLiteInfo;
+import Tools.Shared;
 
 public class Login extends AppCompatActivity {
 
@@ -32,12 +33,13 @@ public class Login extends AppCompatActivity {
 
     public static final String PREFS_NAME = "Attad";
     public static final String LOGIN = "tokenKey";
+    public static final String user = "Luser";
+
 
     String token;
     Context context;
 
     SharedPreferences sharedpreferences;
-    public static final String user = "Luser";
 
     NavigationItemsSQLiteInfo myDB;
     CouNavItem couNavItem;
@@ -58,8 +60,7 @@ public class Login extends AppCompatActivity {
 
         //.............. insert data into SQLite db ..............................................
 
-
-        sharedpreferences = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
+        final Shared shared=Shared.getInstance(Login.this);
 
 
         login =(Button)findViewById(R.id.attad);
@@ -68,9 +69,10 @@ public class Login extends AppCompatActivity {
         sign_up =(TextView)findViewById(R.id.signup);
         forget_pass =(TextView)findViewById(R.id.forgetpass);
 
-        if (sharedpreferences.getString(user,null) != null)
+        if (shared.getIsLOGGED() != null){
+            startActivity(new Intent(Login.this, MainHome.class));
+        }
 
-           startActivity(new Intent(Login.this, MainHome.class));
 
 
 
@@ -104,10 +106,8 @@ public class Login extends AppCompatActivity {
 
                                         save2(getApplicationContext(),token);
 
-                                        String n2  = "userLogin";
-                                        SharedPreferences.Editor editor = sharedpreferences.edit();
-                                        editor.putString(user, n2);
-                                        editor.commit();
+                                        shared.setLoggeed("userLogin");
+                                        shared.setUserToken(token);
 
                                         startActivity(new Intent(Login.this,MainHome.class));
 
