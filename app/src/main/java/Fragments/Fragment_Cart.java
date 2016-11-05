@@ -34,8 +34,6 @@ public class Fragment_Cart extends Fragment {
 
 
 
-
-
         return view;
     }
 
