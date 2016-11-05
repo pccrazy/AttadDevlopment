@@ -20,7 +20,7 @@
         <activity
             android:name=".MainHome"
             android:label="@string/title_activity_main_home"
-            android:theme="@style/Theme.AppCompat.Light"/>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
         <activity android:name=".CategorySub"/>
     </application>
 

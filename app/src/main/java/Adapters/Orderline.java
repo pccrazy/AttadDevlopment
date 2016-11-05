@@ -29,10 +29,7 @@ public class Orderline extends RecyclerView.Adapter<Orderline.Orderline_holder> 
     public Orderline(JSONArray orders) {
 
         this.orders=orders;
-
-
     }
-
 
     @Override
     public Orderline_holder onCreateViewHolder(ViewGroup parent, int viewType) {
