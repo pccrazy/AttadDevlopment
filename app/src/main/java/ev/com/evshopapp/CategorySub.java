@@ -6,7 +6,6 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.Toast;
 
 import com.androidnetworking.AndroidNetworking;
 import com.androidnetworking.common.Priority;
@@ -43,7 +42,7 @@ public class CategorySub extends AppCompatActivity {
         setContentView(R.layout.activity_components);
 
 
-        components = (ImageButton) findViewById(R.id.imageButton);
+        components = (ImageButton) findViewById(R.id.componenets);
         chips = (ImageButton) findViewById(R.id.imageButton2);
         sensers = (ImageButton) findViewById(R.id.imageButton3);
         boards = (ImageButton) findViewById(R.id.imageButton4);

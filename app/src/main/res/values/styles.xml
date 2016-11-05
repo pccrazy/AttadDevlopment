@@ -1,7 +1,7 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
 
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -28,10 +28,10 @@
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
     <style name="Widget.MaterialProgressBar.ProgressBar.Horizontal" parent="android:Widget.ProgressBar.Horizontal">
-        <!--
-        Disabled for correct behavior on Android 4.x
-        <item name="android:progressDrawable">@null</item>
-        -->
+
+        <!-- Disabled for correct behavior on Android 4.x
+        <item name="android:progressDrawable">@null</item>  -->
+
         <item name="android:indeterminateDrawable">@null</item>
         <item name="android:minHeight">16dp</item>
         <item name="android:maxHeight">16dp</item>

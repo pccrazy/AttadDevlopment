@@ -75,4 +75,42 @@
     <string name="quantity">Quantity</string>
     <string name="cancel">Cancel</string>
 
+
+    <!--cart-->
+    <string name="mycart">My Cart</string>
+    <string name="total">Total</string>
+    <string name="changequantity">Change Quantity</string>
+    <string name="remove">Delete</string>
+    <string name="congrats">Congrats</string>
+    <string name="cartconfiremd">Your cart has been confirmed. Please proceed to the next step</string>
+    <string name="next">Proceed</string>
+    <string name="sessionended">Your Session is ended please reconfirm your cart and try again</string>
+    <string name="reconfirm">Reconfirm</string>
+    <string name="noemail">You don\'t seem to have an email please go to your account &amp; set one</string>
+    <string name="ooops">Oooops</string>
+    <string name="areusure">Are you sure ?</string>
+    <string name="completepayment">Please wait payment is complete , our Robots are proccessing your order</string>
+    <string name="couldntproccedpayment">We could NOT process your payment. Your card has been declined by the issuer. Please contact your bank</string>
+    <string name="quataition">Qutation will be sent to your email soon</string>
+    <string name="priceisupdated">Be Aware Price is updated</string>
+    <string name="itemoutofstock">The item is out of stock please delete it</string>
+    <string name="wrongquantity">The Quantity is more then stock</string>
+    <string name="something_went_wrong">Somthing went wrong try again</string>
+    <string name="quantity_zero">Quantitiy Cant be zero or more then Stock</string>
+
+
+    <string name="noorders">Your cart is still empty</string>
+
+    <string name="thereare">There are </string>
+    <string name="thereis">There is </string>
+    <string name="oneuqnaitiychanged">item is been updated in Quantity or price please check it out and try again</string>
+    <string name="multiplequantitychaned">items are been updated in Quantity or price please check them out</string>
+    <string name="registeredsuceefully">Thank you..Registered successfully</string>
+
+    <string name="thanku">Thank You… :)</string>
+    <string name="orderisplaced">Your Order has been placed</string>
+    <string name="terms">Terms</string>
+    <string name="continueshopping">Continue Shopping</string>
+
+
 </resources>

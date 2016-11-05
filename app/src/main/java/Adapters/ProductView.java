@@ -97,6 +97,29 @@ public class ProductView extends RecyclerView.Adapter<ProductView.ViewHolder> im
             holder.productview_u50.setText(String.valueOf(df.format(changeTottal(productInfo.getDouble("price") * 0.85))) + " OMR" );
 
 
+
+
+
+
+            holder.back.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+
+
+                    //back button to list products..
+                }
+            });
+
+
+            holder.cart.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+
+                    // list of cart appear ..
+
+                }
+            });
+
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -156,7 +179,6 @@ public class ProductView extends RecyclerView.Adapter<ProductView.ViewHolder> im
                                 dialog.dismiss();
                             }
 
-
                         }
 
                     } catch (JSONException e) {
@@ -180,10 +202,6 @@ public class ProductView extends RecyclerView.Adapter<ProductView.ViewHolder> im
 
 
     }
-
-
-
-
 
 
 

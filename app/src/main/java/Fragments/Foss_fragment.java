@@ -9,9 +9,7 @@ import android.view.ViewGroup;
 
 import ev.com.evshopapp.R;
 
-/**
- * A simple {@link Fragment} subclass.
- */
+
 public class Foss_fragment extends Fragment {
 
 
