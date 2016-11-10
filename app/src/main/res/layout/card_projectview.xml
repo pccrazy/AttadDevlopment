@@ -33,7 +33,7 @@
             android:layout_toEndOf="@+id/btn_back_productview"
             android:padding="16dp"
             android:textColor="#ecf0f1"
-            android:text="@string/title_activity_product__container"
+            android:text="@string/title_activity_product_container"
             android:layout_toRightOf="@+id/btn_back_productview"
             android:layout_weight="3" />
 

@@ -79,4 +79,7 @@
     <string name="mycart">My Cart</string>
 
 
+
+
+    <string name="title_activity_product_container">Product View</string>
 </resources>
