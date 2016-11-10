@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="56dp"
+        android:layout_gravity="center_horizontal|top"
+        android:id="@+id/sub_fakeactionbar_product_view"
+        android:background="@color/nliveo_orange_colorPrimaryDark">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/subcategory_catname"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/imageButton"
+            android:layout_toEndOf="@+id/imageButton"
+            android:padding="16dp"
+            android:textColor="#ecf0f1"
+            android:text="@string/mycart" />
+
+        <ImageButton
+            android:layout_width="48dp"
+            android:layout_height="fill_parent"
+            android:src="@drawable/ic_action_options_lines_512"
+            android:background="@color/nliveo_transparent"
+            android:visibility="gone"
+            android:id="@+id/imageButton" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:id="@+id/liner_1"
+        android:layout_below="@+id/sub_fakeactionbar_product_view"
+        android:layout_height="13dp">
+
+        <ProgressBar
+            android:id="@+id/horizontal_progress_cart"
+            android:layout_width="match_parent"
+            android:layout_height="13dp"
+            android:indeterminate="true"
+            style="@style/Widget.MaterialProgressBar.ProgressBar.Horizontal"
+            android:layout_gravity="top"
+            android:visibility="gone"
+
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+    </LinearLayout>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_cart_noproducts"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+
+        android:layout_width="fill_parent"
+        android:layout_height="160dp"
+        android:layout_gravity="center"
+        card_view:cardCornerRadius="3dp"
+        android:showDividers="end"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        android:foregroundGravity="center"
+        android:layout_marginTop="12dp"
+        android:visibility="gone">
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/noorders"
+                android:id="@+id/notfound"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:visibility="visible"
+                android:autoText="false"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/imageView"
+                android:layout_above="@+id/notfound"
+                android:src="@drawable/smilyface"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/Cart_recyclerview"
+        android:scrollbars="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/cart_background"
+        android:visibility="visible"
+        android:layout_below="@+id/liner_1" />
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/productviewmenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="10dp"
+        fab:menu_fab_size="normal"
+        fab:menu_showShadow="true"
+        fab:menu_shadowColor="#66000000"
+        fab:menu_shadowRadius="4dp"
+        fab:menu_shadowXOffset="1dp"
+        fab:menu_shadowYOffset="3dp"
+        fab:menu_colorNormal="#ffff8400"
+        fab:menu_colorPressed="#F29800"
+        fab:menu_colorRipple="#99FFFFFF"
+        fab:menu_animationDelayPerItem="50"
+        fab:menu_icon="@drawable/fab_add"
+        fab:menu_buttonSpacing="0dp"
+        fab:menu_labels_margin="0dp"
+        fab:menu_labels_showAnimation="@anim/fab_slide_in_from_right"
+        fab:menu_labels_hideAnimation="@anim/fab_slide_out_to_right"
+        fab:menu_labels_paddingTop="4dp"
+        fab:menu_labels_paddingRight="8dp"
+        fab:menu_labels_paddingBottom="4dp"
+        fab:menu_labels_paddingLeft="8dp"
+        fab:menu_labels_padding="8dp"
+        fab:menu_labels_textColor="#FFFFFF"
+        fab:menu_labels_textSize="14sp"
+        fab:menu_labels_cornerRadius="3dp"
+        fab:menu_labels_colorNormal="#818286"
+        fab:menu_labels_colorPressed="#444444"
+        fab:menu_labels_colorRipple="#66FFFFFF"
+        fab:menu_labels_showShadow="true"
+        fab:menu_labels_singleLine="false"
+        fab:menu_labels_ellipsize="none"
+        fab:menu_labels_maxLines="-1"
+        fab:menu_labels_position="left"
+        fab:menu_openDirection="up"
+        android:layout_marginBottom="15dp">
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/Cart_confirm"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentBottom="true"
+            fab:fab_label="@string/confirm"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            fab:fab_colorNormal="#818286"
+            fab:fab_size="normal"
+            android:src="@drawable/ic_confirm" />
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/Cart_getQutation"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentBottom="true"
+            fab:fab_label="@string/getqutation"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="16dp"
+            fab:fab_colorNormal="#DAE500"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            fab:fab_size="normal"
+            android:src="@drawable/ic_addtowishlist" />
+    </com.github.clans.fab.FloatingActionMenu>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:touchscreenBlocksFocus="false"
+        tools:ignore="UnusedAttribute"
+        android:id="@+id/cart_background"
+        android:gravity="center_vertical"
+        android:weightSum="1"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/textView65"
+            android:text="@string/total"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textColor="#ffffff"
+            android:textSize="17sp"
+            android:layout_marginLeft="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/Cart_Tottal"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_margin="8sp"
+            android:textColor="#ffff8400"
+            android:textSize="17sp"
+            android:layout_weight="0.10" />
+    </LinearLayout>
+</RelativeLayout>

@@ -23,4 +23,15 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <!--cart hidden button-->
+    <color name="nliveo_transparent">#00000000</color>
+
+    <!--progress on CartView.xml -->
+    <style name="Widget.MaterialProgressBar.ProgressBar.Horizontal" parent="android:Widget.ProgressBar.Horizontal">
+
+        <item name="android:indeterminateDrawable">@null</item>
+        <item name="android:minHeight">16dp</item>
+        <item name="android:maxHeight">16dp</item>
+    </style>
+
 </resources>

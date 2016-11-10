@@ -73,4 +73,10 @@
     <string name="quantity">Quantity</string>
     <string name="cancel">Cancel</string>
 
+    <!--Cart View -->
+    <string name="total">Total</string>
+    <string name="noorders">Your cart is still empty</string>
+    <string name="mycart">My Cart</string>
+
+
 </resources>
