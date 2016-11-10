@@ -1,24 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="18dp"
-    android:paddingRight="10dp"
-    android:paddingTop="16dp"
+    android:orientation="vertical"
     tools:context=".CategorySub">
-
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="83dp"
-            android:id="@+id/linearLayout">
+            android:layout_height="56dp"
+            android:layout_gravity="center_horizontal|top"
+            android:id="@+id/sub_fakeactionbar"
+            android:background="@color/nliveo_orange_colorPrimaryDark"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:src="@drawable/ic_left_arrow"
+                    android:background="@color/nliveo_transparent"
+                    android:id="@+id/btn_backsub"
+                    android:layout_weight="0.1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:id="@+id/subcategory_catname"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/productview_sub_fakeactionbar_cart"
+                    android:textColor="#ecf0f1"
+                    android:layout_toRightOf="@+id/btn_backsub"
+                    android:layout_toEndOf="@+id/btn_backsub"
+                    android:paddingRight="18dp"
+                    android:gravity="center_vertical"
+                    android:layout_weight="2.8" />
+
+                <ImageButton
+                    android:layout_width="48dp"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/productview_sub_fakeactionbar_cart"
+                    android:background="@color/nliveo_transparent"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/carticon"
+                    android:layout_weight="0.1" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:id="@+id/linearButtonLayout">
 
 
                 <ImageButton
                     android:layout_width="61dp"
                     android:layout_height="65dp"
-                    android:id="@+id/imageButton"
+                    android:id="@+id/componenets"
                     android:src="@drawable/ic_ic_components"/>
 
                 <ImageButton
@@ -55,6 +95,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/recyclerSubView"
-            android:layout_below="@+id/linearLayout" />
+            android:layout_below="@+id/linearButtonLayout" />
 
-</RelativeLayout>
+</LinearLayout>

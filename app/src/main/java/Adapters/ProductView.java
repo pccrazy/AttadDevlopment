@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,10 +28,6 @@ import java.util.Locale;
 import SQliteDatabase.CartSQLiteinfo;
 import ev.com.evshopapp.R;
 
-
-/**
- * Created by anaRose on 9/20/16.
- */
 
 public class ProductView extends RecyclerView.Adapter<ProductView.ViewHolder> implements View.OnClickListener{
 
@@ -64,6 +61,8 @@ public class ProductView extends RecyclerView.Adapter<ProductView.ViewHolder> im
 
         df.applyPattern(pattern);
 
+
+
         return new ViewHolder(v);
     }
 
@@ -73,9 +72,7 @@ public class ProductView extends RecyclerView.Adapter<ProductView.ViewHolder> im
         Log.d("data" , String.valueOf(productInfo));
 
 
-
         try {
-
 
             holder.productname.setText(productInfo.getString("name"));
             holder.productdiscription.setText(productInfo.getString("description"));
@@ -100,6 +97,29 @@ public class ProductView extends RecyclerView.Adapter<ProductView.ViewHolder> im
             holder.productview_u50.setText(String.valueOf(df.format(changeTottal(productInfo.getDouble("price") * 0.85))) + " OMR" );
 
 
+
+
+
+
+            holder.back.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+
+
+                    //back button to list products..
+                }
+            });
+
+
+            holder.cart.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+
+                    // list of cart appear ..
+
+                }
+            });
+
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -117,8 +137,6 @@ public class ProductView extends RecyclerView.Adapter<ProductView.ViewHolder> im
     {
         return (double) Math.round(price * 1000) / 1000;
     }
-
-
 
     @Override
     public void onClick(View view) {
@@ -152,14 +170,14 @@ public class ProductView extends RecyclerView.Adapter<ProductView.ViewHolder> im
                                     productInfo.getString(""),
                                     productInfo.getInt(itemquentity.getText().toString()));
 
-
                             Cursor res = cartinfo.getAllData();
 
                             if (res.getCount() > 0){
 
                                 Toast.makeText(context, "data inserted ", Toast.LENGTH_SHORT).show();
-                            }
 
+                                dialog.dismiss();
+                            }
 
                         }
 
@@ -194,12 +212,12 @@ public class ProductView extends RecyclerView.Adapter<ProductView.ViewHolder> im
 
 
 
-
-
-
-
     public class ViewHolder extends RecyclerView.ViewHolder {
 
+
+
+        private ImageButton back;
+        private ImageButton cart;
 
         private CardView card_view_productname_discritption;
         private TextView productname;
@@ -210,13 +228,16 @@ public class ProductView extends RecyclerView.Adapter<ProductView.ViewHolder> im
 
         private RecyclerView product_image_view;
 
-
         private TextView productview_u25;
         private TextView productview_u50;
 
 
         public ViewHolder(View itemView) {
             super(itemView);
+
+
+            back = (ImageButton) itemView.findViewById(R.id.btn_back_productview);
+            cart = (ImageButton) itemView.findViewById(R.id.productview_sub_fakeactionbar_cart);
 
             card_view_productname_discritption = (CardView) itemView.findViewById(R.id.card_view_productname_discritption);
             productname = (TextView) itemView.findViewById(R.id.productname);
@@ -229,7 +250,6 @@ public class ProductView extends RecyclerView.Adapter<ProductView.ViewHolder> im
 
             productview_u25 = (TextView) itemView.findViewById(R.id.productview_u25);
             productview_u50 = (TextView) itemView.findViewById(R.id.productview_u50);
-
 
 
         }

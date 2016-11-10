@@ -163,8 +163,6 @@ public class Login extends AppCompatActivity {
         });
     }
 
-
-
     public void save2(Context context, String LoginToken) {
 
         SharedPreferences settings;
