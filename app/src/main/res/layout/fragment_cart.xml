@@ -4,7 +4,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
- 
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="56dp"
+        android:layout_gravity="center_horizontal|top"
+        android:id="@+id/sub_fakeactionbar_product_view"
+        android:background="@color/nliveo_orange_colorPrimaryDark">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/subcategory_catname"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/imageButton"
+            android:layout_toEndOf="@+id/imageButton"
+            android:padding="16dp"
+            android:textColor="#ecf0f1"
+            android:text="@string/mycart" />
+
+        <ImageButton
+            android:layout_width="48dp"
+            android:layout_height="fill_parent"
+            android:src="@drawable/ic_action_options_lines_512"
+            android:background="@color/nliveo_transparent"
+            android:visibility="gone"
+            android:id="@+id/imageButton" />
+
+    </RelativeLayout>
 
     <LinearLayout
         android:orientation="horizontal"

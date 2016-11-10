@@ -43,6 +43,8 @@ public class Product extends RecyclerView.Adapter<Product.ProductsViewHolder> {
 
 
     RecyclerView productview;
+
+
     public Product(JSONArray productsArrey, Context context ,  RecyclerView recyclerView2){
         this.context=context;
         this.products = productsArrey;

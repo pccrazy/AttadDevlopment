@@ -4,7 +4,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 /**
- * Created by code_crazy on 10/26/16.
+ * Created by code_crazy on 10/26/16. test
  */
 public class Shared {
 

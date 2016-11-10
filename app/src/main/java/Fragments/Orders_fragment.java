@@ -2,7 +2,10 @@ package Fragments;
 
 
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,8 +16,11 @@ import com.androidnetworking.common.Priority;
 import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.JSONObjectRequestListener;
 
+import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
+import Adapters.Orderline;
 import Adapters.ProductView;
 import Tools.Shared;
 import ev.com.evshopapp.R;
@@ -25,6 +31,7 @@ import ev.com.evshopapp.R;
 public class Orders_fragment extends Fragment {
 
 
+    RecyclerView recyclerView;
     public Orders_fragment() {
         // Required empty public constructor
     }
@@ -33,9 +40,13 @@ public class Orders_fragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        View rootView = inflater.inflate(R.layout.fragment_orders, container, false);
+        recyclerView= (RecyclerView) rootView.findViewById(R.id.orders_rv);
+        LinearLayoutManager mLayoutManager =  new LinearLayoutManager(getActivity(),LinearLayoutManager.VERTICAL,false);
+        recyclerView.setLayoutManager(mLayoutManager);
         // Inflate the layout for this fragment
         getOrders();
-        return inflater.inflate(R.layout.fragment_orders, container, false);
+        return rootView;
     }
 
     void getOrders(){
@@ -50,7 +61,18 @@ public class Orders_fragment extends Fragment {
                     @Override
                     public void onResponse(JSONObject response) {
 
-                        Log.d("data",String.valueOf(response));
+                        try {
+                            JSONArray orders=response.getJSONArray("result");
+                            Log.d("data",orders.toString());
+
+                            Orderline orderline=new Orderline(orders);
+                            recyclerView.setAdapter(orderline);
+
+
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
 
                     }
                     @Override
@@ -59,6 +81,8 @@ public class Orders_fragment extends Fragment {
                     }
 
                 });
+
+
 
     }
 
