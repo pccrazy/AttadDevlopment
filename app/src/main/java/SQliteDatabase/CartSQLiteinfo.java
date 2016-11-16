@@ -3,12 +3,11 @@ package SQliteDatabase;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
-import android.database.DatabaseErrorHandler;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 /**
- * Created by anaRose on 10/18/16.
+ Created by anaRose on 10/18/16.
  */
 
 public class CartSQLiteinfo extends SQLiteOpenHelper {
@@ -16,7 +15,6 @@ public class CartSQLiteinfo extends SQLiteOpenHelper {
 
     private static final String DB_Name = "CartDB";
     private static final String TABLE_NAME = "ProductInfo";
-    //private static final String COL_0 = "product_id";
     private static final String COL_0 = "product_name";
     private static final String COL_1 = "product_desc";
     private static final String COL_2 = "price";
@@ -71,5 +69,31 @@ public class CartSQLiteinfo extends SQLiteOpenHelper {
         Cursor res = db.rawQuery("select * from "+TABLE_NAME,null);
         return res;
     }
+
+
+    // Getting All Contacts
+//    public List<Contact> getAllContacts() {
+//        List<Contact> contactList = new ArrayList<Contact>();
+        // Select All Query
+//        String selectQuery = "SELECT  * FROM " + TABLE_CONTACTS;
+//
+//        SQLiteDatabase db = this.getWritableDatabase();
+//        Cursor cursor = db.rawQuery(selectQuery, null);
+//
+        // looping through all rows and adding to list
+//        if (cursor.moveToFirst()) {
+//            do {
+//                Contact contact = new Contact();
+//                contact.setID(Integer.parseInt(cursor.getString(0)));
+//                contact.setName(cursor.getString(1));
+//                contact.setPhoneNumber(cursor.getString(2));
+                // Adding contact to list
+//                contactList.add(contact);
+//            } while (cursor.moveToNext());
+//        }
+//
+        // return contact list
+//        return contactList;
+//    }
 
 }

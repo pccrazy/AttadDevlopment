@@ -91,12 +91,10 @@ public class Product extends RecyclerView.Adapter<Product.ProductsViewHolder> {
 
                                         Log.d("data",String.valueOf(response));
 
-
                                         ProductView adapter =
                                                 new ProductView(context, response, productview);
 
                                         productview.setAdapter(adapter);
-
                                         notifyDataSetChanged();
 
                                     }
