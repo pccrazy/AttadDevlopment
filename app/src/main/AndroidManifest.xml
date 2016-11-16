@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="ev.com.evshopapp">
+
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -20,8 +21,10 @@
         <activity
             android:name=".MainHome"
             android:label="@string/title_activity_main_home"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
-        <activity android:name=".CategorySub"/>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name=".CategorySub" />
+        <activity android:name=".ProductView" />
+        <activity android:name=".CartView"></activity>
     </application>
 
 </manifest>
